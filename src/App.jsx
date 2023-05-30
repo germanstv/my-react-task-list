@@ -1,7 +1,7 @@
 import { Header } from "./components/Header";
 import { TaskList } from "./components/TaskList";
 import { useState, useEffect } from "react";
-
+import '../src/components/Style.css';
 const tareasPendientes = [
   {id:1, descripcion:"Pasear al perro", completada:false},
   {id:2, descripcion:"Hacer los panes", completada:false},
@@ -58,25 +58,29 @@ function App() {
 
     return (
       <div className="app">
-        <Header/>
-        <form className="f1">
-          <input className="primerimput"
-          type="text"
-          maxLength="25"
-          value={tareaNueva}
-          onChange={handlerChange}
-          placeholder="ingrese tarea"
-          />
-          <button className="primerboton" type="submit" onClick={agregar}>
-            +
-          </button>
-        </form>
+        <div className="header-todoApp">
+          <Header/>
+          <form className="f1">
+            <input className="primerimput"
+            type="text"
+            maxLength="25"
+            value={tareaNueva}
+            onChange={handlerChange}
+            placeholder="Ingrese aqui su nueva tarea"
+            />
+            <button className="primerboton" type="submit" onClick={agregar}>
+              +
+            </button>
+          </form>
+        </div>
+        <div className="tasklist">
         <TaskList
           pendientes={listaTareas}
           onEliminar={eliminarTarea}
           onEditar={editarTarea}
           onCompletar={onComplete}
         />
+        </div>
       </div>
     );
   }

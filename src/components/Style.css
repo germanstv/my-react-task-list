@@ -1,0 +1,53 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 10%;
+    background-color: aqua;
+    width: 20%;
+    height: 90%;
+}
+
+.header-todoApp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 98%;
+    margin-top: 1%;
+    background-color: bisque;
+}
+
+a {
+    text-decoration: none;
+}
+
+.f1 {
+    margin-top: 20px;
+    padding-bottom: 3px;
+}
+
+.f1 input {
+    margin-right: 20px;
+}
+
+.tasklist {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    width: 98%;
+    background-color: blue;
+}
+
+li {
+    display: flex;
+    margin-bottom: 10%;
+    background-color: azure;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
